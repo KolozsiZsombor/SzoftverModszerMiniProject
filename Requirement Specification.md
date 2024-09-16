@@ -1,3 +1,7 @@
-#Követelmény specifikáció
+# Requirement Specification
 
+## Current Situation
 
+## Dream Situation
+
+## List of Requirements
