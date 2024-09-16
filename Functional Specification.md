@@ -1,23 +1,7 @@
 # Functional Specification
 
+## 1. Purpose
 
-## Purpose
+## 2. Specific requirements
 
-
-
-
-
-
-## Specific requirements
-
-
-
-
-
-
-## Other Requirements
-
-
-
-
-
+## 3. Other Requirements
