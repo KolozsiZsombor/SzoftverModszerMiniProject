@@ -6,6 +6,8 @@
 
 ## 2. Dream Situation
 
+  The website will allow anyone with an account to share jokes with everyone who visits. You will be able to read jokes without making an account.
+
 ## 3. List of Requirements
 
 3.1 HTML/CSS
