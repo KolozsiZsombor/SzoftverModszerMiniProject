@@ -6,7 +6,7 @@
 
 ## 2. Dream Situation
 
-  The website will allow anyone with an account to share jokes with everyone who visits. You will be able to read jokes without making an account.
+  The aim is to create a user friendly joke website where users can easily share and rate jokes. Registered accounts can upload jokes and rate others. Users can read, react and rate the jokes, just to read jokes you dont have to register ann account and can browse anonymously. Jokes with good ratings will be at the top of the page while badly rated ones will be mostly at the bottom. There would also be a hidden admin interface to manage the platform and take down jokes in case one gets uploaded that violate the profanity/bad word filter.
 
 ## 3. Current Business Modell
 
