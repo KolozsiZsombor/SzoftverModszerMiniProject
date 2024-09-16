@@ -1,1 +1,23 @@
-#Funkcionális Specifikáció
+#Functional Specification
+
+
+##Purpose
+
+
+
+
+
+
+##Specific requirements
+
+
+
+
+
+
+##Other Requirements
+
+
+
+
+
