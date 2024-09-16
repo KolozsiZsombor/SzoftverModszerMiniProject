@@ -1,21 +1,21 @@
-#Functional Specification
+# Functional Specification
 
 
-##Purpose
-
-
-
-
-
-
-##Specific requirements
+## Purpose
 
 
 
 
 
 
-##Other Requirements
+## Specific requirements
+
+
+
+
+
+
+## Other Requirements
 
 
 
