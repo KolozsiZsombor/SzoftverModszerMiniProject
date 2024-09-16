@@ -2,7 +2,7 @@
 
 ## 1. Current situation
 
-  Our jokes are distrubuted by paper or sometimes they appear in magazines meaning it is difficult to share good jokes with anyone that isn't nearby.
+  There is currently no central online platform where users can share jokes, rate them and interact with each other in a joke-based community. The sharing and rating of jokes is rather sporadic, taking place on various social media platforms and forums. These platforms do not provide dedicated features for rating, organising and publishing jokes.
 
 ## 2. Dream Situation
 
