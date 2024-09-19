@@ -17,7 +17,28 @@ Currently, users find and share jokes through various platforms with the followi
 - **Rating**: Informal feedback through comments or likes, often limited.
 - **Engagement**: Minimal interaction due to the dispersed nature of platforms.
 
-## 4. Desired Buseness Modell
+## 4. Desired Business Modell
+The new system will streamline the following processes:
+
+1. **User Registration**:
+   - Users create accounts with email verification.
+   - Profile management for personalized experience.
+
+2. **Joke Submission**:
+   - Users submit jokes with categories and tags for organization.
+   - Submission must not includes multimedia (images, videos) in order to keep down data storage requirements.
+
+3. **Rating and Feedback**:
+   - Users rate jokes and leave comments.
+   - A moderation process to flag inappropriate content.
+
+4. **Content Discovery**:
+   - Users can search and filter jokes based on categories, ratings, and popularity.
+   - Daily/weekly highlights of top content.
+
+5. **Community Engagement**:
+   - Users can follow others, create joke collections, and share them.
+   - Notifications for user interactions (likes, comments).
 
 ## 5. List of Requirements
 
