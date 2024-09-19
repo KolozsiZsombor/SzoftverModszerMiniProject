@@ -41,7 +41,12 @@ The new system will streamline the following processes:
    - Users can follow others, create joke collections, and share them.
    - Notifications for user interactions (likes, comments).
 
-## 5. List of Requirements
+## 5. Laws and Regulations the systems must adhere to
+
+- Intellectual Property Laws: Respect for copyright laws regarding joke submissions and sharing.
+- Compliance with GDPR (General Data Protection Regulation)
+
+## 6. List of Requirements
 
 1. **User Account Managment**:
    - Users must be able to register, log in, and manage profiles.
