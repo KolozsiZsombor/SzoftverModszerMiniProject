@@ -10,6 +10,13 @@
 
 ## 3. Current Business Modell
 
+Currently, users find and share jokes through various platforms with the following processes:
+
+- **Discovery**: Searching for jokes on social media or forums.
+- **Sharing**: Manually copy pasting jokes in order to share them.
+- **Rating**: Informal feedback through comments or likes, often limited.
+- **Engagement**: Minimal interaction due to the dispersed nature of platforms.
+
 ## 4. Desired Buseness Modell
 
 ## 5. List of Requirements
