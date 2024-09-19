@@ -1,14 +1,25 @@
 # Functional Specification
 
-## 1. Purpose
-1.1. Building a Website
-1.1.1. Drawn picture of bear at the top. Moves when scrolled.
-1.1.2. Login/Register button in top. Account button if logged in.
-1.1.3. Jokes in the main area of the Website.
-1.1.4. Github/Trello links at the bottom of site.
-1.1.5. Abiility to write jokes on the website, and send them for review.
-1.1.6. Ability to Vote on Jokes.
+## 1. Current Situation
+See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#1-current-situation
 
-## 2. Specific requirements
+## 2. Dream Situation
+See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#2-dream-situation
 
-## 3. Other Requirements
+## 3. Current Business Model
+See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#3-current-business-modell
+
+## 4. Desired Business Model
+See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#4-desired-business-modell
+
+## 5. Laws and Requlations the systems must adhere to
+See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#5-laws-and-regulations-the-systems-must-adhere-to
+
+## 6. List of Requirements
+See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#6-list-of-requirements
+
+## 7. Use Cases
+
+## 8. Display Plans
+
+## 9. Scenarios
