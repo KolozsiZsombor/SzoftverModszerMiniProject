@@ -42,8 +42,17 @@ The new system will streamline the following processes:
 
 ## 5. List of Requirements
 
-5.1 HTML/CSS
-5.1.1 For the look creation of our website.
-5.1.2 For the main part of the website.
-5.2 Javascript
-5.2.1 For interactable objects.
+1. **User Account Managment**:
+   - Users must be able to register, log in, and manage profiles.
+
+2. **Joke Submission**:
+   - Users must submit jokes with optional categories and tags.
+
+3. **Rating System**:
+   - Users must be able to rate joks with a simple interface (thumbs up/down or stars).
+
+4. **Search Functionality**:
+   - Users must be able to search jokes using keywords, categories and filters.
+
+5. **Moderation Tools**:
+   - Admins must have the ability to review, edit, and delete content as needed.
