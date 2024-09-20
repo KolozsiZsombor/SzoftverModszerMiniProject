@@ -19,6 +19,8 @@ See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main
 See here: https://github.com/KolozsiZsombor/SzoftverModszerMiniProject/blob/main/docs/Requirement%20Specification.md#6-list-of-requirements
 
 ## 7. Use Cases
+### 7.1 Users
+Visitors of the site will be able to display it, and see the top rated jokes without an account. They should be able to sort by rating or recency, filter for category, and search content. Registered users should be able to share jokes, set one or more category for their posts, and delete their own jokes. They should also be able to rate other people's jokes.
 
 ## 8. Display Plans
 
