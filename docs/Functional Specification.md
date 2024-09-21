@@ -42,8 +42,10 @@ The profile page of a registered user will display the jokes they posted, in chr
 ### 8.3 Attachments
 
 #### 8.3.1 User View
+!(/pictures/user.png)
 
 #### 8.3.2 Admin View
+!(/pictures/admin.png)
 
 ## 9. Scenarios
 ### 9.1 User's point of view
