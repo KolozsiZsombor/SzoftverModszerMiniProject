@@ -124,16 +124,16 @@ The goal is to develop a simple, user-friendly platform where users can share, b
 
 ## 7 Timeline and Milestones
 
-1. ** Week 1-2:** Initial Planning
+1. **Week 1-2:** Initial Planning
    - Creation of Functional Specification.
    - Creation of Requirement Specification.
    - Creation of System Plan.
-2. ** Week 3** Development
+2. **Week 3:** Development
    - Backend API, database architecture.
    - Profanity Filter.
    - Fronted development with registration, joke submission and rating.
    - Admin dashboard, moderation tools, and users management.
-3. ** Week 4** Testing
+3. **Week 4:** Testing
    - User testing.
    - Bug fixes.
    - Final deployment
@@ -147,3 +147,19 @@ The goal is to develop a simple, user-friendly platform where users can share, b
 3. Launching new features like user leaderboards, joke competitions, or joke categories based on user engagement.
 
 ---
+
+## 9. Responsibilities
+
+### 9.1. Feature Responsibilities
+- **Frontend Development:**
+  - **Homepage:**
+  - **Joke submission form:**
+  - **Rating and reactions system:**
+- **Backend Development:**
+  - **Profanity Filter:**
+  - **Database:**
+  - **User authentication and session management:**
+### 9.2. Ongoing Responsibilities
+- **Admin Team:**
+- **Security Team:**
+- **Development Team:**
