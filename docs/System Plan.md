@@ -73,7 +73,7 @@ The goal is to develop a simple, user-friendly platform where users can share, b
 
 ---
 
-## Technical Stack
+## 3. Technical Stack
 
 ### 3.1 Frontend
   - **Framework:** HTML paired with JS for responsive interface.
@@ -202,7 +202,7 @@ CREATE TABLE ProfanityFilter (
 ```
 ---
 
-## User flow
+## 4. User flow
 
 1. **Anonymous User:**
   - Browse jokes -> React to jokes -> Search/filter jokes -> Encouraged to register.
