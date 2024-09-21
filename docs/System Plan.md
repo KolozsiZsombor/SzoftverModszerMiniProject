@@ -89,7 +89,46 @@ The goal is to develop a simple, user-friendly platform where users can share, b
 ### 3.3. Admin Tools
   - **Dashboard:** Use a prebuilt admin panel framework.
   - **Content Moderation:** Custom REST API endpoints for moderating flagged content and managing users.
-    
+
+## 3.4 Database Model
+
+### 3.4.1. User Table
+- **id** 
+- **username** 
+- **email** 
+- **password_hash**
+- **role** 
+- **created_at** 
+
+### 3.4.2. Joke Table
+- **id**
+- **user_id**
+- **joke_text**
+- **category**
+- **rating**
+- **created_at**
+
+### 3.4.3. Rating Table
+- **id**
+- **user_id**
+- **joke_id**
+- **rating**
+
+### 3.4.4. Comment Table
+- **id**
+- **user_id**
+- **joke_id**
+- **comment_text**
+- **created_at**
+
+### 3.4.5. Profanity Filter Table
+- **id**
+- **word**
+
+### 3.4.6 Database Scheme
+![Database Model](https://github.com/user-attachments/assets/ea49e170-f0db-459e-ae18-a7170a9019ac)
+
+
 ---
 
 ## User flow
