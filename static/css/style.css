@@ -1,22 +1,137 @@
-body{
-    background-color: beige;
-}
-main {
-    display: block;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 30 30;
-    width: 80%;
-    align-items: center ;
-    background-color: beige ;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-header{
-    
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    background-color: bisque;
-
 }
 
+header h1 {
+    margin: 0;
+}
 
+nav ul {
+    list-style-type: none;
+    margin:0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+    padding: 50px;
+}
+
+.jokes-section {
+    padding: 20px;
+}
+
+.joke-item {
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.joke-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.form-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.jokes-container {
+    display: flex;
+    flex-direction: column; /* Arrange jokes vertically */
+    gap: 15px; /* Space between joke boxes */
+}
+
+.joke-box {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Positioning for footer buttons */
+}
+
+.joke-header {
+    align-items: left;
+    font-size: 1.2em; /* Slightly larger font for category */
+    margin-bottom: 10px; /* Space between header and content */
+}
+
+.joke-content {
+    margin-bottom: 20px; /* Space between content and footer */
+}
+
+.joke-footer {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    position: absolute; /* Positioning at bottom right */
+    bottom: 15px; /* Adjust according to the padding */
+    right: 15px; /* Adjust according to the padding */
+}
+
+.rate-btn, .react-btn {
+    background-color: #35424a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rate-btn:hover, .react-btn:hover {
+    background-color: #2c3e50; /* Darker shade on hover */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #35424a;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;}

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetveBotch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <h1>Medve-Botch</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    <li><a href="{{ url_for('submit_joke') }}">Submit Joke</a></li>
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}<!DOCTYPE html>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="jokes-list">
+        <h2>Jokes</h2>
+        {% for joke in jokes %}
+        <div class="joke-box">
+            <div class="joke-header">
+                <h3>{{ joke.category }}</h3>
+                <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
+            </div>
+            <p>{{ joke.content }}</p>
+            <div class="joke-actions">
+                <div class="like-dislike">
+                    <span>Likes: {{ joke.likes_count }}</span> <!-- Display the like count -->
+                    <form action="{{ url_for('like_joke', joke_id=joke.id) }}" method="POST">
+
+                        <button type="submit" class="like-btn">Like</button>
+                    </form>
+                    <span>Dislikes: {{ joke.dislikes_count }}</span> <!-- Display the dislike count -->
+                    <form action="{{ url_for('dislike_joke', joke_id=joke.id) }}" method="POST">
+
+                        <button type="submit" class="dislike-btn">Dislike</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+        <a class="btn" href="{{ url_for('home') }}">Browse Jokes</a>
+    </section>
+</body>
+</html>
