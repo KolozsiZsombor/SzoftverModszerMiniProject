@@ -266,7 +266,7 @@ CREATE TABLE ProfanityFilter (
   - **Rating and reactions system:**
 - **Backend Development:**
   - **Profanity Filter:**
-  - **Database:**
+  - **Database:** Kurucz Bálint
   - **User authentication and session management:**
 ### 9.2. Ongoing Responsibilities
 - **Admin Team:**
