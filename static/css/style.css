@@ -1,0 +1,22 @@
+body{
+    background-color: beige;
+}
+main {
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 30 30;
+    width: 80%;
+    align-items: center ;
+    background-color: beige ;
+}
+
+header{
+    
+    align-items: center;
+    text-align: center;
+    background-color: bisque;
+
+}
+
+
