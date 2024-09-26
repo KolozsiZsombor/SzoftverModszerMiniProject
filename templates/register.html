@@ -14,8 +14,9 @@
     <a>
         <div class="topBox"></div>
         <div class="backBox"></div>
-        <div class="logoCircle"></div>
-        <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+        <div class="logoCircle">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+        </div>
         <h1>Join us today!</h1>
         <h5>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></h5>
         <form method="POST">
