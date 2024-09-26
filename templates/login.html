@@ -21,14 +21,15 @@
     {% endif %}
     {% endwith %}
     <a>
-        <div class="topBox"></div>
-        <div class="backBox"></div>
-        <div class="logoCircle">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+        <div class="topBox">
+            <div class="logoCircle">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+            </div>
         </div>
+        <div class="backBox"></div>
         <h1>Welcome Back!</h1>
         <h5>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></h5>
-        <form method="POST" action="{{ url_for('login') }}">
+        <form method="POST" action="{{ url_for('login') }}" class="form">
             {{ form.hidden_tag() }}
             <div>
                 <input type="email" name="email" id="email" placeholder="Email">
@@ -50,6 +51,7 @@
             <img src="{{ url_for('static', filename='img/home.svg') }}" width="20" />
             <a href="{{ url_for('home') }}">Home</a>
         </div>
+        
     </a>
 
 </body>

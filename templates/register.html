@@ -11,14 +11,16 @@
 
 <body>
     <a>
-        <div class="topBox"></div>
-        <div class="backBox"></div>
-        <div class="logoCircle">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+        <div class="topBox">
+            <div class="logoCircle">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+            </div>
         </div>
+        <div class="backBox"></div>
         <h1>Join us today!</h1>
         <h5>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></h5>
-        <form method="POST">
+        <form method="POST" action="{{ url_for('login') }}" class="form">
+        <form method="POST" class="form">
             {{ form.hidden_tag() }}
             <div>
                 <input type="email" name="email" id="email" placeholder="Email">
