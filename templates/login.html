@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Login</h1>
-
-        <!-- Display flash messages -->
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                <ul class="flashes">
-                {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
-
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <a>
+        <div class="topBox"></div>
+        <div class="backBox"></div>
+        <div class="logoCircle"></div>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+        <h1>Welcome Back!</h1>
+        <h5>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></h5>
         <form method="POST" action="{{ url_for('login') }}">
             {{ form.hidden_tag() }}
-            <div class="form-group">
-                <label for="email">Email</label>
-                {{ form.email(class="form-control", placeholder="Enter your email") }}
+            <div>
+                <input type="email" name="email" id="email" placeholder="Email">
                 {% for error in form.email.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
+                <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                {{ form.password(class="form-control", placeholder="Enter your password") }}
+            <div>
+                <input type="password" name="password" id="password" placeholder="Password">
                 {% for error in form.password.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
+                <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </div>
-            <div class="form-group">
-                {{ form.submit(class="btn btn-primary") }}
+            <div>
+                <button type="submit">Login</button>
             </div>
         </form>
+        <div class="home">
+            <img src="{{ url_for('static', filename='img/home.svg') }}" width="20" />
+            <a href="{{ url_for('home') }}">Home</a>
+        </div>
+    </a>
 
-        <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
-    </div>
 </body>
+
 </html>
