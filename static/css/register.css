@@ -1,0 +1,59 @@
+a {
+    left: 50%;
+}
+
+body {
+    position: relative;
+    top: 20px;
+    display: block;
+    text-align: center;
+    border: 3px solid #ccc;
+    width: 320px;
+    height: 400px;
+    margin: auto;
+    
+}
+
+form {
+    display: inline-block;
+}
+
+input,
+textarea,
+select {
+    width: 160px;
+    height: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #ccc;
+}
+
+
+input[type=submit] {
+    width: 180px;
+    height: fit-content;
+    background-color: #555;
+}
+
+input[type=submit]:hover {
+    background-color: #777;
+}
+
+
+.box {
+    width: 120px;
+    height: 80px;
+    background-color: darkgoldenrod;
+    background-clip: border-box;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index:-1;
+}
+
+.box0 {
+    offset-position: normal;
+  }

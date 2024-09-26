@@ -20,7 +20,7 @@ header h1 {
 
 nav ul {
     list-style-type: none;
-    margin:0;
+    margin: 0;
 }
 
 nav ul li {
@@ -32,6 +32,8 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+
+
 
 .main-content {
     text-align: center;
@@ -62,7 +64,10 @@ nav ul li a {
     margin: 0 auto;
 }
 
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
@@ -83,8 +88,10 @@ button:hover {
 
 .jokes-container {
     display: flex;
-    flex-direction: column; /* Arrange jokes vertically */
-    gap: 15px; /* Space between joke boxes */
+    flex-direction: column;
+    /* Arrange jokes vertically */
+    gap: 15px;
+    /* Space between joke boxes */
 }
 
 .joke-box {
@@ -93,28 +100,37 @@ button:hover {
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* Positioning for footer buttons */
+    position: relative;
+    /* Positioning for footer buttons */
 }
 
 .joke-header {
     align-items: left;
-    font-size: 1.2em; /* Slightly larger font for category */
-    margin-bottom: 10px; /* Space between header and content */
+    font-size: 1.2em;
+    /* Slightly larger font for category */
+    margin-bottom: 10px;
+    /* Space between header and content */
 }
 
 .joke-content {
-    margin-bottom: 20px; /* Space between content and footer */
+    margin-bottom: 20px;
+    /* Space between content and footer */
 }
 
 .joke-footer {
     display: flex;
-    justify-content: space-between; /* Space between buttons */
-    position: absolute; /* Positioning at bottom right */
-    bottom: 15px; /* Adjust according to the padding */
-    right: 15px; /* Adjust according to the padding */
+    justify-content: space-between;
+    /* Space between buttons */
+    position: absolute;
+    /* Positioning at bottom right */
+    bottom: 15px;
+    /* Adjust according to the padding */
+    right: 15px;
+    /* Adjust according to the padding */
 }
 
-.rate-btn, .react-btn {
+.rate-btn,
+.react-btn {
     background-color: #35424a;
     color: white;
     border: none;
@@ -123,8 +139,10 @@ button:hover {
     cursor: pointer;
 }
 
-.rate-btn:hover, .react-btn:hover {
-    background-color: #2c3e50; /* Darker shade on hover */
+.rate-btn:hover,
+.react-btn:hover {
+    background-color: #2c3e50;
+    /* Darker shade on hover */
 }
 
 .btn {
@@ -134,4 +152,5 @@ button:hover {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;}
+    margin-top: 20px;
+}
