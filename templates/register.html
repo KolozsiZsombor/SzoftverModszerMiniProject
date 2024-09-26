@@ -11,11 +11,12 @@
 
 <body>
     <a>
-        <div class="wrap"></div>
-        <div class="box"></div>
-        <div class="box box0"></div>
-        </div>
-        <h1>Register</h1>
+        <div class="topBox"></div>
+        <div class="backBox"></div>
+        <div class="logoCircle"></div>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="logo" />
+        <h1>Join us today!</h1>
+        <h5>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></h5>
         <form method="POST">
             {{ form.hidden_tag() }}
             <div>
@@ -31,7 +32,11 @@
                 {% endfor %}
             </div>
             <div>
-                {{ form.submit() }}
+                <button type="submit">Register</button>
+            </div>
+            <div class="home">
+                <img src="{{ url_for('static', filename='img/home.svg') }}" width="20" />
+                <a href="{{ url_for('home') }}">Home</a>
             </div>
         </form>
     </a>
