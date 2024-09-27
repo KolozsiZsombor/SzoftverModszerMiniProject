@@ -9,21 +9,33 @@ header {
     border-bottom: 4px solid rgb(127,116,63);
     background-color: rgb(255,233,127);
     color: rgb(102,57,23);
-    padding: 15px;
-    display: flex;
+    display:flex;
     justify-content: space-between;
+    height:160px;
+}
+
+.perm-header {
     align-items: top right;
-    height:120px;
+    text-align: right;
+    background-color: rgb(255,233,127);
+    padding:1em;
+    padding-left:0;
+    margin-top:0;
+    position: fixed;
+    right:0;
+    border-left: 4px solid rgb(127,116,63);
+    border-bottom: 4px solid rgb(127,116,63);
+    z-index: 1;
 }
 
 .logo{
     position:absolute;
-    top:0;
+    top:10px;
     left: -60px;
 }
 
 .title{
-    padding-top:20px;
+    padding-top:40px;
     position:relative;
     left:180px;
     font-family:'Caveat';
@@ -48,8 +60,6 @@ nav ul li a {
     font-weight: 600;
     text-decoration: none;
 }
-
-
 
 .main-content {
     text-align: center;
