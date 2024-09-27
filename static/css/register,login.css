@@ -74,13 +74,16 @@ h5 {
 
 .form{
     padding-top: 5em;
+    justify-content: center;
 }
 
 .home {
     font-size: larger;
     font-weight: 600;
-    position: relative;
-    top: 6em;
+    position: absolute;
+    bottom:1em;
+    left: 50%;
+    transform: translateX(-40px);
 }
 
 .homeIcon {
