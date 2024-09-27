@@ -2,16 +2,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(255,244,191);
 }
 
 header {
-    background-color: #333;
-    color: white;
+    border-bottom: 4px solid rgb(127,116,63);
+    background-color: rgb(255,233,127);
+    color: rgb(102,57,23);
     padding: 15px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top right;
+    height:120px;
+}
+
+.logo{
+    position:absolute;
+    top:0;
+    left: -60px;
+}
+
+.title{
+    padding-top:20px;
+    position:relative;
+    left:180px;
+    font-family:'Caveat';
+    font-size:xx-large;
 }
 
 header h1 {
@@ -29,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -40,12 +56,12 @@ nav ul li a {
     padding: 50px;
 }
 
-.jokes-section {
+.jokes-list {
     padding: 20px;
 }
 
 .joke-item {
-    background-color: white;
+    background-color: rgb(246,255,173);
     margin: 10px 0;
     padding: 20px;
     border-radius: 5px;
