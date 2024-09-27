@@ -1,4 +1,3 @@
-from flask import Flask, render_template
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -45,6 +44,7 @@ login_manager.login_view = 'login'  # Redirect to login if not authenticated
 class User(db.Model,UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
+    name = db.Column(db.String(120), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
     role = db.Column(db.String(10), default='normal', nullable=False)  # Role can be 'admin' or 'normal'
     created_at = db.Column(db.DateTime, default=datetime.utcnow)  # Record creation date
@@ -132,6 +132,7 @@ def load_user(user_id):
 ### Registration 
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
+    name = StringField('Name',validators=[DataRequired(), Length(min=6, max=32)])
     password = PasswordField('Password', validators=[DataRequired(), Length(min=6, max=30)])
     role = SelectField('Role', choices=[('normal', 'Normal User'), ('admin', 'Admin User')], default='normal')
     submit = SubmitField('Register')
@@ -141,6 +142,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         email = form.email.data
+        name = form.name.data
         password = form.password.data
         role = form.role.data
         
@@ -148,7 +150,7 @@ def register():
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
         
         # Create a new user and add to the database
-        new_user = User(email=email, password_hash=hashed_password, role=role)
+        new_user = User(email=email, name=name, password_hash=hashed_password, role=role)
         db.session.add(new_user)
         db.session.commit()
         

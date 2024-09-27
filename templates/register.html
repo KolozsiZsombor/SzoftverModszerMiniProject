@@ -20,29 +20,35 @@
         <div class="backBox"></div>
         <h1>Join us today!</h1>
         <h5>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></h5>
-        <form method="POST" action="{{ url_for('login') }}" class="form">
-        <form method="POST" class="form">
-            {{ form.hidden_tag() }}
-            <div>
-                <input type="email" name="email" id="email" placeholder="Email">
-                {% for error in form.email.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
+        <form method="POST" action="{{ url_for('register') }}" class="form">
+            <form method="POST" class="form">
+                {{ form.hidden_tag() }}
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+                <div>
+                    <input type="name" name="name" id="name" placeholder="User Name">
+                    {% for error in form.name.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    {% for error in form.password.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+            <div class="home">
+                <img src="{{ url_for('static', filename='img/home.svg') }}" width="20" class="homeIcon" />
+                <a href="{{ url_for('home') }}">Home</a>
             </div>
-            <div>
-                <input type="password" name="password" id="password" placeholder="Password">
-                {% for error in form.password.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </div>
-            <div>
-                <button type="submit">Register</button>
-            </div>
-        </form>
-        <div class="home">
-            <img src="{{ url_for('static', filename='img/home.svg') }}" width="20" class="homeIcon"/>
-            <a href="{{ url_for('home') }}">Home</a>
-        </div>
     </a>
 </body>
 
