@@ -17,7 +17,7 @@
         <ul>
             <li><a href="{{ url_for('home') }}"><img src="{{url_for('static',filename='img/home.png')}}" alt="Home" title="Home" width="32" height="32"></a></li>
             {% if current_user.is_authenticated %}
-            <li><a href="{{ url_for('submit_joke') }}"><img src="{{url_for('static',filename='img/edit.png')}}" alt="Home" title="Home" width="32" height="32"></a></li>
+            <li><a href="{{ url_for('submit_joke') }}"><img src="{{url_for('static',filename='img/edit.png')}}" alt="Submit Joke" title="Submit Joke" width="32" height="32"></a></li>
             <li><a href="{{ url_for('profile') }}"><img src="{{url_for('static',filename='img/user.png')}}" alt="Profile" title="Profile" width="32" height="32"></a></li>
             <li><a href="{{ url_for('logout') }}"><img src="{{url_for('static',filename='img/sign-out.png')}}" alt="Log out" title="Log out" width="32" height="32"></a></li>
             {% else %}
