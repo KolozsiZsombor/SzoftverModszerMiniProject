@@ -263,7 +263,8 @@ def admin():
         return redirect(url_for('home'))
 
     jokes = Joke.query.all()  # Fetch all jokes from the database
-    return render_template('admin.html', jokes=jokes)
+    users = User.query.all()  # Fetch all users from the database
+    return render_template('admin.html', jokes=jokes, users=users)
 
 @app.route('/admin/delete/<int:joke_id>', methods=['POST'])
 @login_required

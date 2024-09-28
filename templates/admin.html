@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="{{ url_for('grant_admin_by_email') }}" method="POST">
+        <label for="email">Grant Admin Rights to User:</label>
+        <input type="text" name="email" placeholder="Enter User Email" required>
+        <button type="submit">Grant Admin</button>
+    </form>
+    <h2>Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>User Name</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.role }}</td>
+                <td>
+                    {% if user.role != 'admin' %}
+                    <form action="{{ url_for('grant_admin_by_email', user_email=user.email) }}" method="POST"
+                        style="display:inline;">
+                        <button type="submit">Grant Admin</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Jokes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Category</th>
+                <th>Rating</th>
+                <th>Created At</th>
+                <th>Approved</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for joke in jokes %}
+            <tr>
+                <td>{{ joke.id }}</td>
+                <td>{{ joke.user_id }}</td>
+                <td>{{ joke.category }}</td>
+                <td>{{ joke.rating }}</td>
+                <td>{{ joke.created_at }}</td>
+                <td>{{ joke.approved }}</td>
+                <td>
+                    <form action="{{ url_for('approve_joke', joke_id=joke.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" {% if joke.approved %}disabled{% endif %}>Approve</button>
+                    </form>
+                    <form action="{{ url_for('disapprove_joke', joke_id=joke.id) }}" method="POST"
+                        style="display:inline;">
+                        <button type="submit" {% if not joke.approved %}disabled{% endif %}>Disapprove</button>
+                    </form>
+                    <form action="{{ url_for('delete_joke', joke_id=joke.id) }}" method="POST" style="display:inline;">
+                        <button type="submit"
+                            onclick="return confirm('Are you sure you want to delete this joke?');">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
