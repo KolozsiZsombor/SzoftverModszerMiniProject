@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Joke</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/submit_joke.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/home.png') }}"
+                            height="32" width="32" id="home" style="cursor: pointer;" title="Home"></a></li>
+                <li><a href="{{ url_for('profile') }}"><img src="{{ url_for('static', filename='img/user.png') }}"
+                            height="32" width="32" id="profile" style="cursor: pointer;" title="Profile"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="backBox"></div>
+    <div class="topBox"></div>
+    <h1>Submit Your Joke Here!</h1>
+    <form method="POST" action="{{ url_for('submit_joke') }}">
+        <div class="categorySelect">
+            <label for="category">Please select a category:</label>
+            <select name="category" id="category" required>
+                <option value="Misc Jokes">Misc Jokes</option>
+                <option value="Yo Mamma Jokes">Yo Mamma Jokes</option>
+                <option value="National Jokes">National Jokes</option>
+                <option value="Marriage Jokes">Marriage Jokes</option>
+                <option value="Elderly Jokes">Elderly Jokes</option>
+                <option value="Programmer Jokes">Programmer Jokes</option>
+                <option value="Political Jokes">Political Jokes</option>
+                <option value="Knock Knock Jokes">Knock Knock Jokes</option>
+                <option value="Word Play Jokes">Word Play Jokes</option>
+            </select>
+            <button type="submit">Submit</button>
+        </div>
+        <div class="textBox">
+            <textarea id="content" name="content" required placeholder="Write Your Joke Here!"></textarea>
+        </div>
+    </form>
+</body>
+
+</html>

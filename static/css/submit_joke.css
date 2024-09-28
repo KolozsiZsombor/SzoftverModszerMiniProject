@@ -1,0 +1,121 @@
+body {
+    background-clip: padding-box;
+    background-color: #e0e0e0;
+    position: relative;
+    top: 3em;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border: #e0e0e0 2px solid;
+    width: 70%;
+    height: 80%;
+}
+
+.header {
+    background-clip: border-box;
+    background-color: #663366;
+    display: inline;
+    position: fixed;
+    height: fit-content;
+    width: fit-content;
+    right: 0;
+    top: 0;
+    border-left: 2px solid #663366;
+    border-bottom: 2px solid #663366;
+    border-bottom-left-radius: 10px;
+    z-index: 1;
+}
+
+form {
+    padding: 10%;
+    display: grid;
+}
+
+input,
+textarea,
+select,
+button {
+    height: fit-content;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 1em;
+    border-radius: 0px;
+}
+
+textarea {
+    resize: none;
+    width: 50em;
+    height: 15em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+select {
+    width: fit-content;
+}
+
+button[type=submit] {
+    width: fit-content;
+    height: fit-content;
+    display: inline;
+    background-color: #663366;
+    border: 1px solid black;
+}
+
+button[type=submit]:hover {
+    background-color: #442344;
+}
+
+h1 {
+    position: relative;
+    color: white;
+}
+
+label {
+    position: relative;
+    align-self: baseline;
+    margin-top: 1%;
+}
+
+#home,
+#profile {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    filter: invert(100%);
+    margin-bottom: 5px;
+}
+
+.form {
+    padding-top: 5em;
+    justify-content: center;
+}
+
+.categorySelect {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28em;
+    position: relative;
+    left: 20.75em;
+
+}
+
+.topBox,
+.backBox {
+    width: 100%;
+    height: 100%;
+    background-clip: border-box;
+    position: absolute;
+    padding-top: 0em;
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+    z-index: -2;
+}
+
+.topBox {
+    background-color: #cc9900;
+    height: 5em;
+}
