@@ -11,16 +11,11 @@ header {
     color: rgb(102,57,23);
     display:flex;
     justify-content: space-between;
-    height:160px;
+    height:144px;
 }
 
 .perm-header {
-    align-items: top right;
-    text-align: right;
     background-color: rgb(255,233,127);
-    padding:12px;
-    padding-left:0;
-    margin-top:0;
     position: fixed;
     right:0;
     border-left: 4px solid rgb(127,116,63);
@@ -49,16 +44,13 @@ header h1 {
 nav ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     text-align: center;
     margin-right: 15px;
-}
-
-nav ul li a {
-    font-weight: 600;
-    text-decoration: none;
+    margin-left: 15px;
 }
 
 .main-content {

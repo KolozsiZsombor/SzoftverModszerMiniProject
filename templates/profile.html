@@ -15,14 +15,14 @@
 <header>
     <nav class="perm-header">
         <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}"><img src="{{url_for('static',filename='img/home.png')}}" alt="Home" title="Home" width="32" height="32"></a></li>
             {% if current_user.is_authenticated %}
-            <li><a href="{{ url_for('submit_joke') }}">Submit Joke</a></li>
-            <li><a href="{{ url_for('profile') }}">Profile</a></li>
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('submit_joke') }}"><img src="{{url_for('static',filename='img/edit.png')}}" alt="Home" title="Home" width="32" height="32"></a></li>
+            <li><a href="{{ url_for('profile') }}"><img src="{{url_for('static',filename='img/user.png')}}" alt="Profile" title="Profile" width="32" height="32"></a></li>
+            <li><a href="{{ url_for('logout') }}"><img src="{{url_for('static',filename='img/sign-out.png')}}" alt="Log out" title="Log out" width="32" height="32"></a></li>
             {% else %}
-            <li><a href="{{ url_for('register') }}">Register</a></li>
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}"><img src="{{url_for('static',filename='img/profile-new.png')}}" alt="Register" title="Register" width="32" height="32"></a></li>
+            <li><a href="{{ url_for('login') }}"><img src="{{url_for('static',filename='img/in.png')}}" alt="Log in" title="Log in" width="32" height="32"></a></li>
             {% endif %}
             <!DOCTYPE html>
         </ul>
