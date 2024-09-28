@@ -222,8 +222,10 @@ def submit_joke():
 
 
 @app.route('/profile', methods=['GET', 'POST'])
+@login_required
 def profile():
-    return render_template('profile.html')
+    jokes = Joke.query.filter_by(user_id=current_user.id)
+    return render_template('profile.html',jokes=jokes)
 
 
 
