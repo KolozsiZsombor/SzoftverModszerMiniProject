@@ -55,12 +55,10 @@
             <p class="joke-content">{{ joke.content }}</p>
             <div class="joke-actions">
                 <div class="like-dislike">
-                    <span>Likes: {{ joke.likes_count }}</span> <!-- Display the like count -->
                     <form action="{{ url_for('like_joke', joke_id=joke.id) }}" method="POST">
 
                         <button type="submit" class="like-btn">Like</button>
                     </form>
-                    <span>Dislikes: {{ joke.dislikes_count }}</span> <!-- Display the dislike count -->
                     <form action="{{ url_for('dislike_joke', joke_id=joke.id) }}" method="POST">
 
                         <button type="submit" class="dislike-btn">Dislike</button>
