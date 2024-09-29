@@ -38,12 +38,10 @@
     </header>
 
     <section class="jokes-list">
-        <h2>Jokes</h2>
         {% for joke in jokes %}
         <div class="joke-box">
             <div class="joke-header">
                 <h3>{{ joke.category }}</h3>
-                <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
             </div>
             <p class="joke-content">{{ joke.content }}</p>
             <div class="joke-actions">
@@ -60,10 +58,13 @@
                     </form>
                 </div>
             </div>
+            <div class="joke-footer">
+                <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
+            </div>
         </div>
         {% endfor %}
     </section>
-    <a class="btn" href="{{ url_for('home') }}">Browse Jokes</a>
+    <a class="btn" href="{{ url_for('home') }}">Return to top</a>
     </section>
 </body>
 
