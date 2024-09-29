@@ -48,27 +48,29 @@
     </div>
     <section class="jokes-list">
         {% for joke in jokes %}
-        <div class="joke-box">
-            <div class="joke-header">
-                <h3>{{ joke.category }}</h3>
-            </div>
-            <p class="joke-content">{{ joke.content }}</p>
-            <div class="joke-actions">
-                <div class="like-dislike">
-                    <form action="{{ url_for('like_joke', joke_id=joke.id) }}" method="POST">
+            {% if joke.user_id == current_user.id %}
+            <div class="joke-box">
+                <div class="joke-header">
+                    <h3>{{ joke.category }}</h3>
+                </div>
+                <p class="joke-content">{{ joke.content }}</p>
+                <div class="joke-actions">
+                    <div class="like-dislike">
+                        <form action="{{ url_for('like_joke', joke_id=joke.id) }}" method="POST">
 
-                        <button type="submit" class="like-btn">Like</button>
-                    </form>
-                    <form action="{{ url_for('dislike_joke', joke_id=joke.id) }}" method="POST">
+                            <button type="submit" class="like-btn">Like</button>
+                        </form>
+                        <form action="{{ url_for('dislike_joke', joke_id=joke.id) }}" method="POST">
 
-                        <button type="submit" class="dislike-btn">Dislike</button>
-                    </form>
+                            <button type="submit" class="dislike-btn">Dislike</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="joke-footer">
+                    <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
                 </div>
             </div>
-            <div class="joke-footer">
-                <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
-            </div>
-        </div>
+            {% endif %}
         {% endfor %}
     </section>
 </body>
