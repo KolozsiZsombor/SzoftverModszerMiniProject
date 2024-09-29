@@ -17,14 +17,20 @@
     <header>
         <nav class="perm-header">
             <ul>
-                <li><a href="{{ url_for('home') }}"><img src="{{url_for('static',filename='img/home.png')}}" alt="Home" title="Home" width="32" height="32"></a></li>
+                <li><a href="{{ url_for('home') }}"><img src="{{url_for('static',filename='img/home.png')}}" alt="Home"
+                            title="Home" width="32" height="32"></a></li>
                 {% if current_user.is_authenticated %}
-                <li><a href="{{ url_for('submit_joke') }}"><img src="{{url_for('static',filename='img/edit.png')}}" alt="Submit Joke" title="Submit Joke" width="32" height="32"></a></li>
-                <li><a href="{{ url_for('profile') }}"><img src="{{url_for('static',filename='img/user.png')}}" alt="Profile" title="Profile" width="32" height="32"></a></li>
-                <li><a href="{{ url_for('logout') }}"><img src="{{url_for('static',filename='img/sign-out.png')}}" alt="Log out" title="Log out" width="32" height="32"></a></li>
+                <li><a href="{{ url_for('submit_joke') }}"><img src="{{url_for('static',filename='img/edit.png')}}"
+                            alt="Submit Joke" title="Submit Joke" width="32" height="32"></a></li>
+                <li><a href="{{ url_for('profile') }}"><img src="{{url_for('static',filename='img/user.png')}}"
+                            alt="Profile" title="Profile" width="32" height="32"></a></li>
+                <li><a href="{{ url_for('logout') }}"><img src="{{url_for('static',filename='img/sign-out.png')}}"
+                            alt="Log out" title="Log out" width="32" height="32"></a></li>
                 {% else %}
-                <li><a href="{{ url_for('register') }}"><img src="{{url_for('static',filename='img/profile-new.png')}}" alt="Register" title="Register" width="32" height="32"></a></li>
-                <li><a href="{{ url_for('login') }}"><img src="{{url_for('static',filename='img/in.png')}}" alt="Log in" title="Log in" width="32" height="32"></a></li>
+                <li><a href="{{ url_for('register') }}"><img src="{{url_for('static',filename='img/profile-new.png')}}"
+                            alt="Register" title="Register" width="32" height="32"></a></li>
+                <li><a href="{{ url_for('login') }}"><img src="{{url_for('static',filename='img/in.png')}}" alt="Log in"
+                            title="Log in" width="32" height="32"></a></li>
                 {% endif %}
                 <!DOCTYPE html>
             </ul>
@@ -39,7 +45,7 @@
 
     <section class="jokes-list">
         {% for joke in jokes %}
-        <div class="joke-box">
+        <div class="joke-box" id={{joke.id}}>
             <div class="joke-header">
                 <h3>{{ joke.category }}</h3>
             </div>
@@ -58,6 +64,11 @@
             </div>
             <div class="joke-footer">
                 <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
+                {% for user in users %}
+                {% if user.id == joke.user_id %}
+                    <p>User: {{ user.name }}</p>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
         {% endfor %}

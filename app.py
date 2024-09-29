@@ -1,12 +1,12 @@
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import select, join
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, SelectField, TextAreaField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, NumberRange
 from flask_bcrypt import Bcrypt
 from werkzeug.security import generate_password_hash, check_password_hash
-
 from functools import wraps
 from datetime import datetime 
 import secrets
@@ -115,9 +115,10 @@ def home():
     if current_user.is_authenticated and current_user.role == 'admin':
         jokes = Joke.query.all()  # Admins see all jokes
     else:
-        jokes = Joke.query.filter_by(approved=True).all()  # Non-admins see only approved jokes
+        jokes = Joke.query.filter_by(approved=True).all()  # Non-admins see only approved 
+    users = User.query.all()
 
-    return render_template('index.html', jokes=jokes)
+    return render_template('index.html', jokes=jokes, users=users)
 
 
 
