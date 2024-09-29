@@ -43,6 +43,9 @@
 </header>
 
 <body>
+    <div class="profilename">
+        {{current_user.name}}'s profile
+    </div>
     <section class="jokes-list">
         {% for joke in jokes %}
         <div class="joke-box">
