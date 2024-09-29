@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Admin Panel</title>
 </head>
 
@@ -61,6 +62,7 @@
                 <th>ID</th>
                 <th>User ID</th>
                 <th>Category</th>
+                <th>Content</th>
                 <th>Rating</th>
                 <th>Created At</th>
                 <th>Approved</th>
@@ -73,6 +75,7 @@
                 <td>{{ joke.id }}</td>
                 <td>{{ joke.user_id }}</td>
                 <td>{{ joke.category }}</td>
+                <td>{{ joke.content }}</td>
                 <td>{{ joke.rating }}</td>
                 <td>{{ joke.created_at }}</td>
                 <td>{{ joke.approved }}</td>
