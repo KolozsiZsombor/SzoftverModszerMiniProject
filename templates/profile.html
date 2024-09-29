@@ -48,7 +48,6 @@
         <div class="joke-box">
             <div class="joke-header">
                 <h3>{{ joke.category }}</h3>
-                <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
             </div>
             <p class="joke-content">{{ joke.content }}</p>
             <div class="joke-actions">
@@ -64,6 +63,9 @@
                         <button type="submit" class="dislike-btn">Dislike</button>
                     </form>
                 </div>
+            </div>
+            <div class="joke-footer">
+                <p>Rating: {{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
             </div>
         </div>
         {% endfor %}
