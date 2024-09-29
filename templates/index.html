@@ -57,13 +57,15 @@
             <div class="joke-actions">
                 <div class="like-dislike">
                     <form action="{{ url_for('like_joke', joke_id=joke.id) }}" method="POST">
-
-                        <button type="submit" class="like-btn">Like</button>
+                        <button type="submit" class="like-btn">
+                            <img src="{{ url_for('static', filename='img/updoot.png') }}" width="32" height="32" />
+                        </button>
                     </form>
                     <p class="rating">{{ joke.rating }}</p> <!-- Assuming rating reflects the total likes -->
                     <form action="{{ url_for('dislike_joke', joke_id=joke.id) }}" method="POST">
-
-                        <button type="submit" class="dislike-btn">Dislike</button>
+                        <button type="submit" class="dislike-btn">
+                            <img src="{{ url_for('static', filename='img/downdoot.png') }}" width="32" height="32" />
+                        </button>
                     </form>
                 </div>
             </div>
