@@ -72,7 +72,7 @@
             <div class="joke-footer">
                 {% for user in users %}
                 {% if user.id == joke.user_id %}
-                    <p>User: <a href="{{ url_for('profile') }}">{{ user.name }}</a></p>
+                    <p href="{{ url_for('profile') }}">{{ user.name }}</p>
                 {% endif %}
                 {% endfor %}
             </div>

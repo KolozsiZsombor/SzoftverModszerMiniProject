@@ -50,14 +50,34 @@
 }
 
 .joke-footer {
-    position: absolute;
-    /* Positioning at bottom right */
-    bottom: 20px;
-    /* Adjust according to the padding */
-    right: 15px;
-    /* Adjust according to the padding */
-    margin:0;
-    height: 20px;
+    position: relative;
+    margin-left:auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    width: fit-content;
+    background-color: #663366;
+    background-clip: border-box;
+    height: fit-content;
+    border: 2px solid #f5f3ef;
+    border-radius: 5px;
+    align-items: center;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }
 
 .like-dislike {
