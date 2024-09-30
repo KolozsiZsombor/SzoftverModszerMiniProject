@@ -42,8 +42,12 @@
             <h1>Medve-Botch</h1>
         </div>
         <div class="contacts">
-            <a href="https://github.com/KolozsiZsombor/SzoftverModszerMiniProject"><img src="{{ url_for('static', filename='img/github.png') }}" alt="GitHub" title="GitHub" width="40" height="40" class="github"/></a>
-            <a href="https://trello.com/b/fzeVdeYr/szoftvermodszer"><img src="{{ url_for('static', filename='img/trello.png') }}" alt="Trello" title="Trello" width="40" height="40" class="trello"/></a>
+            <a href="https://github.com/KolozsiZsombor/SzoftverModszerMiniProject"><img
+                    src="{{ url_for('static', filename='img/github.png') }}" alt="GitHub" title="GitHub" width="40"
+                    height="40" class="github" /></a>
+            <a href="https://trello.com/b/fzeVdeYr/szoftvermodszer"><img
+                    src="{{ url_for('static', filename='img/trello.png') }}" alt="Trello" title="Trello" width="40"
+                    height="40" class="trello" /></a>
         </div>
     </header>
 
@@ -72,7 +76,7 @@
             <div class="joke-footer">
                 {% for user in users %}
                 {% if user.id == joke.user_id %}
-                    <p href="{{ url_for('profile') }}">{{ user.name }}</p>
+                <p><a href="{{ url_for('profile') }}">{{ user.name }}</a></p>
                 {% endif %}
                 {% endfor %}
             </div>
